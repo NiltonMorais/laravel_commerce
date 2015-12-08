@@ -1,4 +1,4 @@
-<h1>Exemplo</h1>
+<h1>Categories</h1>
 
 <ul>
     @foreach($categories as $category)
