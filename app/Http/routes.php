@@ -11,6 +11,12 @@
 |
 */
 
+Route::get('/', 'WelcomeController@index');
+
+Route::get('exemplo', 'WelcomeController@exemplo');
+
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/

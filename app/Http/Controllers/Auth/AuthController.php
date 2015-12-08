@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace CodeCommerce\Http\Controllers\Auth;
 
-use App\User;
+use CodeCommerce\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use CodeCommerce\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
