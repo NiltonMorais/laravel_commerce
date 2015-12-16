@@ -2,24 +2,24 @@
 
 namespace CodeCommerce\Http\Controllers;
 
-use CodeCommerce\Product;
-use Illuminate\Http\Request;
+use CodeCommerce\Category;
 
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Http\Controllers\Controller;
+use CodeCommerce\Product;
 
 class AdminProductsController extends Controller
 {
-    private $products;
+    private $productModel;
 
     public function __construct(Product $product)
     {
-        $this->products = $product;
+        $this->productModel = $product;
     }
 
     public function index()
     {
-        $products = $this->products->all();
+        $products = $this->productModel->all();
         return view('products.index', compact('products'));
     }
 
@@ -30,18 +30,23 @@ class AdminProductsController extends Controller
      */
     public function create()
     {
-        //
+        return view('products.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Requests\ProductRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\ProductRequest $request)
     {
-        //
+        $input = $request->all();
+        $input['featured'] = $request->get('featured') ? true : false;
+        $input['recommend'] = $request->get('recommend') ? true : false;
+        $product = $this->productModel->fill($input);
+        $product->save();
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -52,7 +57,9 @@ class AdminProductsController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = $this->productModel->find($id);
+
+        return view('products.show', compact('product'));
     }
 
     /**
@@ -63,19 +70,26 @@ class AdminProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = $this->productModel->find($id);
+
+        return view('products.edit', compact('product'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\ProductRequest  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Requests\ProductRequest $request, $id)
     {
-        //
+        $input = $request->all();
+        $input['featured'] = $request->get('featured') ? true : false;
+        $input['recommend'] = $request->get('recommend') ? true : false;
+
+        $this->productModel->find($id)->update($input);
+        return redirect()->route('admin.products.index');
     }
 
     /**
@@ -86,6 +100,7 @@ class AdminProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+       $this->productModel->find($id)->delete();
+        return redirect()->route('admin.products.index');
     }
 }

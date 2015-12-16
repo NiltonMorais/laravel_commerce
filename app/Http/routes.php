@@ -34,12 +34,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'] , function(){
 
     Route::group(['prefix'=> 'products', 'as' => 'products.'],function(){
         Route::get('', ['as' => 'index', 'uses' => 'AdminProductsController@index']);
-        Route::get('show/{id}', ['as' => 'show', 'uses' => 'AdminProductsController@show']);
+        Route::get('{id}/show', ['as' => 'show', 'uses' => 'AdminProductsController@show']);
         Route::get('create', ['as' => 'create', 'uses' => 'AdminProductsController@create']);
         Route::post('store', ['as' => 'store', 'uses' => 'AdminProductsController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'AdminProductsController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'AdminProductsController@update']);
-        Route::get('delete/{id}', ['as' => 'delete', 'uses' => 'AdminProductsController@delete']);
+        Route::get('{id}/edit', ['as' => 'edit', 'uses' => 'AdminProductsController@edit']);
+        Route::put('{id}/update', ['as' => 'update', 'uses' => 'AdminProductsController@update']);
+        Route::get('{id}/destroy', ['as' => 'destroy', 'uses' => 'AdminProductsController@destroy']);
     });
 
     Route::group(['prefix'=> 'categories', 'as' => 'categories.'],function(){
