@@ -23,14 +23,9 @@ Route::get('produtos', ['as'=>'produtos', function(){
     return "Produtos";
 }]);
 
+*/
 Route::get('/', function () {
     return view('welcome');
-});
-
-*/
-Route::get('category/{category}', function(\CodeCommerce\Category $category){
-    dd($category);
-    return $category->name;
 });
 
 
@@ -49,12 +44,12 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'] , function(){
 
     Route::group(['prefix'=> 'categories', 'as' => 'categories.'],function(){
         Route::get('', ['as' => 'index', 'uses' => 'AdminCategoriesController@index']);
-        Route::get('show/{id}', ['as' => 'show', 'uses' => 'AdminCategoriesController@show']);
+        Route::get('{id}/show', ['as' => 'show', 'uses' => 'AdminCategoriesController@show']);
         Route::get('create', ['as' => 'create', 'uses' => 'AdminCategoriesController@create']);
         Route::post('store', ['as' => 'store', 'uses' => 'AdminCategoriesController@store']);
-        Route::get('edit/{id}', ['as' => 'edit', 'uses' => 'AdminCategoriesController@edit']);
-        Route::post('update/{id}', ['as' => 'update', 'uses' => 'AdminCategoriesController@update']);
-        Route::get('delete/{id}', ['as' => 'delete', 'uses' => 'AdminCategoriesController@delete']);
+        Route::get('{id}/edit', ['as' => 'edit', 'uses' => 'AdminCategoriesController@edit']);
+        Route::put('{id}/update', ['as' => 'update', 'uses' => 'AdminCategoriesController@update']);
+        Route::get('{id}/destroy', ['as' => 'destroy', 'uses' => 'AdminCategoriesController@destroy']);
     });
 
 });
