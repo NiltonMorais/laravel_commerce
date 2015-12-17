@@ -14,6 +14,7 @@
             <th>Price</th>
             <th>Featured</th>
             <th>Recommend</th>
+            <th>Category</th>
             <th>Action</th>
         </tr>
         @foreach($products as $product)
@@ -24,6 +25,7 @@
                 <td>{{$product->price}}</td>
                 <td>{{$product->featured ? 'Yes' : "No"}}</td>
                 <td>{{$product->recommend ? 'Yes' : "No"}}</td>
+                <td>{{$product->category->name}}</td>
                 <td>
                     <a href="{{ route('admin.products.show', ['id'=>$product->id]) }}">Show</a> |
                     <a href="{{ route('admin.products.edit', ['id'=>$product->id]) }}">Edit</a> |
@@ -32,4 +34,6 @@
             </tr>
         @endforeach
     </table>
+
+    {!! $products->render() !!}
 @endsection

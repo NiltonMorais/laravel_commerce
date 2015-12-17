@@ -29,8 +29,7 @@ Route::get('/', function () {
 });
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.'] , function(){
-
+Route::group(['prefix' => 'admin', 'as' => 'admin.', 'where' => ['id' => '[0-9']] , function(){
 
     Route::group(['prefix'=> 'products', 'as' => 'products.'],function(){
         Route::get('', ['as' => 'index', 'uses' => 'AdminProductsController@index']);
