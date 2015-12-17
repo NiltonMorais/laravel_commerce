@@ -12,6 +12,7 @@
 
     <br>
     <a href="{{ route('admin.products.edit', ['id'=>$product->id]) }}" class='btn btn-primary '>Edit</a>
+    <a href="{{ route('admin.products.images.index', ['id'=>$product->id]) }}" class="btn btn-info">Images</a>
     <a href="{{ route('admin.products.destroy', ['id'=>$product->id]) }}" class='btn btn-danger '>Delete</a>
     <a href="{{ route('admin.products.index') }}" class='btn btn-default '>Back</a>
 

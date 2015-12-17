@@ -29,6 +29,7 @@
                 <td>
                     <a href="{{ route('admin.products.show', ['id'=>$product->id]) }}">Show</a> |
                     <a href="{{ route('admin.products.edit', ['id'=>$product->id]) }}">Edit</a> |
+                    <a href="{{ route('admin.products.images.index', ['id'=>$product->id]) }}">Images</a> |
                     <a href="{{ route('admin.products.destroy', ['id'=>$product->id]) }}">Delete</a>
                 </td>
             </tr>
