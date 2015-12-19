@@ -36,6 +36,10 @@
         {!! Form::checkbox('recommend') !!}
     </div>
     <div class="form-group">
+        {!! Form::label('tags', 'Tags:') !!}
+        {!! Form::textarea('tags', null, ['class'=>'form-control']) !!}
+    </div>
+    <div class="form-group">
         {!! Form::submit('Add Products', ['class'=>'btn btn-primary ']) !!}
         <a href="{{ route('admin.products.index') }}" class='btn btn-default '>Back</a>
     </div>

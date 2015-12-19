@@ -32,8 +32,8 @@ class Product extends Model
 
     public function getTagListAttribute()
     {
-        $tags = $this->tags->lists('name');
-        return implode(',', $tags);
+        $tags = $this->tags->lists('name')->toArray();
+        return implode(', ', $tags);
     }
 
     public function scopeFeatured($query)

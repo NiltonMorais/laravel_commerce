@@ -6,6 +6,7 @@ use CodeCommerce\Category;
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Product;
 use CodeCommerce\ProductImage;
+use CodeCommerce\Tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -47,8 +48,26 @@ class AdminProductsController extends Controller
         $input = $request->all();
         $input['featured'] = $request->get('featured') ? true : false;
         $input['recommend'] = $request->get('recommend') ? true : false;
+        $tags = $request->get('tags') ? explode(",", $request->get('tags')) : [];
+
         $product = $this->productModel->fill($input);
         $product->save();
+
+        $arrayTags = [];
+
+        foreach($tags as $tag){
+            $t = Tag::where('name','=',trim($tag))->first();
+            if($t){
+                $arrayTags[] = $t->id;
+            }
+            else{
+                $t = Tag::create(['name' => trim($tag)]);
+                $arrayTags[] = $t->id;
+            }
+        }
+
+        $product->tags()->sync($arrayTags);
+
         return redirect()->route('admin.products.index');
     }
 
@@ -92,8 +111,25 @@ class AdminProductsController extends Controller
         $input = $request->all();
         $input['featured'] = $request->get('featured') ? true : false;
         $input['recommend'] = $request->get('recommend') ? true : false;
+        $tags = $request->get('tags') ? explode(",", $request->get('tags')) : [];
 
         $this->productModel->find($id)->update($input);
+
+        $arrayTags = [];
+
+        foreach($tags as $tag){
+            $t = Tag::where('name','=',trim($tag))->first();
+            if($t){
+                $arrayTags[] = $t->id;
+            }
+            else{
+                $t = Tag::create(['name' => trim($tag)]);
+                $arrayTags[] = $t->id;
+            }
+        }
+
+        $product = Product::find($id);
+        $product->tags()->sync($arrayTags);
         return redirect()->route('admin.products.index');
     }
 

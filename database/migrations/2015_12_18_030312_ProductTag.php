@@ -27,6 +27,6 @@ class ProductTag extends Migration
      */
     public function down()
     {
-        Schema::drop('products_tags');
+        Schema::drop('product_tag');
     }
 }
