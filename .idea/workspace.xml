@@ -1,99 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f0dc426-f7d8-48ad-84aa-681632f0ed2f" name="Default" comment="Estrutura da Loja">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/404/404.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/blog-one.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/blog-three.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/blog-two.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/man-four.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/man-one.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/man-three.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/man-two.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/blog/socials.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/cart/one.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/cart/three.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/cart/two.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/bg_border.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/gallery1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/gallery2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/gallery3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/gallery4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/girl1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/girl2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/girl3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/iframe1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/iframe2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/iframe3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/iframe4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/map.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/new.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/partner1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/partner2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/partner3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/partner4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/pricing.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/product1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/product2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/product3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/product4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/product5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/product6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/recommend1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/recommend2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/recommend3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/sale.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/searchicon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/home/shipping.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/no-img.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/new.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/rating.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/share.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/similar1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/similar2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/product-details/similar3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/advertisement.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/product10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/product11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/product12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/product7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/product8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/shop/product9.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/uploads/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/StoreController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/animate.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/prettyPhoto.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/price-range.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/responsive.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/contact.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/gmaps.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/html5shiv.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.prettyPhoto.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery.scrollUp.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/price-range.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/store/categories_partial.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/store/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/store/store.blade.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/exemplo.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.woff" />
+    <list default="true" id="7f0dc426-f7d8-48ad-84aa-681632f0ed2f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Product.php" afterPath="$PROJECT_DIR$/app/Product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/database.sqlite" afterPath="$PROJECT_DIR$/database/database.sqlite" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/public/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/public/fonts/glyphicons-halflings-regular.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
     </list>
     <ignored path="laravel_commerce.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,7 +27,7 @@
       <file leaf-file-name="StoreController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StoreController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.461538">
+            <state vertical-scroll-proportion="0.0">
               <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
               <folding>
                 <element signature="e#49#75#0#PHP" expanded="true" />
@@ -130,7 +39,7 @@
       <file leaf-file-name="Product.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Product.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
+            <state vertical-scroll-proportion="0.0">
               <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
               <folding />
             </state>
@@ -140,7 +49,7 @@
       <file leaf-file-name="store.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/store/store.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
+            <state vertical-scroll-proportion="0.0">
               <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
               <folding />
             </state>
@@ -150,7 +59,7 @@
       <file leaf-file-name="ProductImageRequest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProductImageRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8076925">
+            <state vertical-scroll-proportion="0.0">
               <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
@@ -160,7 +69,7 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/store/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6246499">
+            <state vertical-scroll-proportion="1.0196079">
               <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding />
             </state>
@@ -271,8 +180,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -499,7 +408,13 @@
       <option name="project" value="LOCAL" />
       <updated>1450410230311</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Estrutura da Loja">
+      <created>1450487681503</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1450487681503</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -507,14 +422,14 @@
     <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27382752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730711" sideWeight="0.4914842" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730711" sideWeight="0.50851583" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -860,7 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52380955">
           <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04761905">
           <caret line="18" column="68" selection-start-line="18" selection-start-column="68" selection-end-line="18" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +803,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04761905">
           <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,13 +810,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.04761905">
           <caret line="26" column="41" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/store/store.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
+        <state vertical-scroll-proportion="0.0">
           <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
           <folding />
         </state>
@@ -916,13 +825,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.74229693">
           <caret line="136" column="38" selection-start-line="136" selection-start-column="38" selection-end-line="136" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
+        <state vertical-scroll-proportion="0.0">
           <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
           <folding />
         </state>
@@ -930,7 +838,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/ProductImageRequest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8076925">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
@@ -938,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/StoreController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
           <folding>
             <element signature="e#49#75#0#PHP" expanded="true" />
@@ -948,7 +856,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/store/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6246499">
+        <state vertical-scroll-proportion="1.0196079">
           <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding />
         </state>
