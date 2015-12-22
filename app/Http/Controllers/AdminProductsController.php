@@ -48,28 +48,17 @@ class AdminProductsController extends Controller
         $input = $request->all();
         $input['featured'] = $request->get('featured') ? true : false;
         $input['recommend'] = $request->get('recommend') ? true : false;
-        $tags = $request->get('tags') ? explode(",", $request->get('tags')) : [];
+
+        $arrayTags = $this->tagToArray($input['tags']);
 
         $product = $this->productModel->fill($input);
         $product->save();
-
-        $arrayTags = [];
-
-        foreach($tags as $tag){
-            $t = Tag::where('name','=',trim($tag))->first();
-            if($t){
-                $arrayTags[] = $t->id;
-            }
-            else{
-                $t = Tag::create(['name' => trim($tag)]);
-                $arrayTags[] = $t->id;
-            }
-        }
 
         $product->tags()->sync($arrayTags);
 
         return redirect()->route('admin.products.index');
     }
+
 
     /**
      * Display the specified resource.
@@ -111,22 +100,10 @@ class AdminProductsController extends Controller
         $input = $request->all();
         $input['featured'] = $request->get('featured') ? true : false;
         $input['recommend'] = $request->get('recommend') ? true : false;
-        $tags = $request->get('tags') ? explode(",", $request->get('tags')) : [];
+
+        $arrayTags = $this->tagToArray($input['tags']);
 
         $this->productModel->find($id)->update($input);
-
-        $arrayTags = [];
-
-        foreach($tags as $tag){
-            $t = Tag::where('name','=',trim($tag))->first();
-            if($t){
-                $arrayTags[] = $t->id;
-            }
-            else{
-                $t = Tag::create(['name' => trim($tag)]);
-                $arrayTags[] = $t->id;
-            }
-        }
 
         $product = Product::find($id);
         $product->tags()->sync($arrayTags);
@@ -180,5 +157,20 @@ class AdminProductsController extends Controller
         $image->delete();
 
         return redirect()->route('admin.products.images.index', ['id' => $product->id]);
+    }
+
+
+    private function tagToArray($tags)
+    {
+        $tags = explode(",", $tags);
+        $tags = array_map('trim', $tags);
+
+        $tagCollection = [];
+        foreach ($tags as $tag) {
+            $t = Tag::firstOrCreate(['name' => $tag]);
+            array_push($tagCollection, $t->id);
+        }
+
+        return $tagCollection;
     }
 }
