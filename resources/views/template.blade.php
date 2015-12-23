@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Admin</title>
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
-
+    <link href="{{ elixir('css/all.css') }}" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-default">
@@ -29,5 +28,8 @@
 <div class="container">
     @yield('content')
 </div>
+
+<script src="{{ elixir('js/all.js') }}"></script>
+
 </body>
 </html>

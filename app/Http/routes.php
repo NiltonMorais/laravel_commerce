@@ -26,6 +26,7 @@ Route::get('produtos', ['as'=>'produtos', function(){
 */
 Route::get('/', 'StoreController@index');
 Route::get('category/{id}', ['as' => 'store.category', 'uses' => 'StoreController@category']);
+Route::get('product/{id}', ['as' => 'store.product', 'uses' => 'StoreController@product']);
 
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.', 'where' => ['id' => '[0-9]+']] , function(){
