@@ -42,7 +42,7 @@
                     <p>{{ $product->description }}</p>
                     <p>
                         @foreach($product->tags as $tag)
-                            <a href="{{ route('store.tag', ['id'=>$tag->id]) }}">{{ $tag->name }}</a>
+                            <a href="{{ route('store.tag', ['id'=>$tag->id]) }}" class="label label-primary">{{ $tag->name }}</a>
                         @endforeach
                     </p>
                                 <span>

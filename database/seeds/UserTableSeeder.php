@@ -9,6 +9,13 @@ class UserTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->truncate();
+
         factory('CodeCommerce\User', 15)->create();
+
+        \CodeCommerce\User::create([
+            'name' => "Nilton",
+            'email' => "nilton@schoolofnet.com",
+            'password' => \Illuminate\Support\Facades\Hash::make(123456),
+        ]);
     }
 }

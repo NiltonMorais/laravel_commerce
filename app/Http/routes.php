@@ -1,29 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
-/*
-
-Route::get('/', 'WelcomeController@index');
-Route::get('/admin/categories', 'AdminCategoriesController@index');
-Route::get('/admin/products', 'AdminProductsController@index');
-
-Route::get('exemplo', 'WelcomeController@exemplo');
-
-Route::get('produtos', ['as'=>'produtos', function(){
-    return "Produtos";
-}]);
-
-*/
 Route::get('/', 'StoreController@index');
 Route::get('product/{id}', ['as' => 'store.product', 'uses' => 'StoreController@product']);
 Route::get('category/{id}', ['as' => 'store.category', 'uses' => 'StoreController@category']);
@@ -35,7 +11,7 @@ Route::get('cart/destroy/{id}', ['as' => 'store.cart.destroy', 'uses' => 'CartCo
 Route::get('checkout/placeorder', ['as' => 'store.checkout.place', 'uses' => 'CheckoutController@place']);
 
 
-Route::group(['prefix' => 'admin', 'as' => 'admin.', 'where' => ['id' => '[0-9]+']] , function(){
+Route::group(['prefix' => 'admin', 'middleware'=>'auth', 'as' => 'admin.', 'where' => ['id' => '[0-9]+']] , function(){
 
     Route::group(['prefix'=> 'products', 'as' => 'products.'],function(){
         Route::get('', ['as' => 'index', 'uses' => 'AdminProductsController@index']);
@@ -65,3 +41,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'where' => ['id' => '[0-9]+
     });
 
 });
+
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+    'test' => 'TestController',
+]);

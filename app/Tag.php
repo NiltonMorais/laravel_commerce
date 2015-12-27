@@ -8,14 +8,14 @@ class Tag extends Model
 {
     protected $fillable = ['name'];
 
-    public function produts()
+    public function products()
     {
         return $this->belongsToMany('CodeCommerce\Product');
     }
 
     public function findOrCreate($tagArray)
     {
-        $tag = $this->where('name','=', $tagArray['name'])->firt();
+        $tag = $this->where('name','=', $tagArray['name'])->first();
         if($tag){
             return $tag;
         }

@@ -46,9 +46,9 @@ class Cart
         return $total;
     }
 
-    // add
-    // remove
-    // all
-    // getTotal
+    public function clear()
+    {
+        $this->items = [];
+    }
 
 }
