@@ -10,6 +10,9 @@ Route::get('cart/destroy/{id}', ['as' => 'store.cart.destroy', 'uses' => 'CartCo
 Route::put('cart/update/{id}', ['as' => 'store.cart.update', 'uses' => 'CartController@update']);
 
 
+Route::get('teste', ['as' => 'teste', 'uses' => 'CheckoutController@teste']);
+
+
 Route::group(['middleware'=>'auth'], function(){
     Route::get('checkout/placeorder', ['as' => 'store.checkout.place', 'uses' => 'CheckoutController@place']);
     Route::get('account/orders', ['as' => 'account.orders', 'uses' => 'AccountController@orders']);
