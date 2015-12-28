@@ -20,7 +20,7 @@
                         <tr>
                             <td class="cart_product">
                                 <a href="{{ route('store.product', ['id'=>$k]) }}">
-                                    Imagem
+                                    <img src="{{url($item['image'])}}" width="50" alt="imagem do produto">
                                 </a>
                             </td>
                             <td class="cart_description">
@@ -31,7 +31,14 @@
                                 R$ {{$item['price']}}
                             </td>
                             <td class="cart_quantity">
-                                {{ $item['qtd'] }}
+                                {!! Form::open(['route'=>['store.cart.update', $k], 'method'=>'put']) !!}
+                                <div class="input-group" style="width: 120px">
+                                    {!! Form::text('qtd', $item['qtd'], ['class'=>'form-control']) !!}
+                                      <span class="input-group-btn">
+                                        {!! Form::submit('Alterar', ['class'=>'btn btn-default']) !!}
+                                      </span>
+                                </div><!-- /input-group -->
+                                {!! Form::close() !!}
                             </td>
 
                             <td class="cart_total">

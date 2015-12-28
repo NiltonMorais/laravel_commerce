@@ -7,8 +7,13 @@ Route::get('tag/{id}', ['as' => 'store.tag', 'uses' => 'StoreController@tag']);
 Route::get('cart', ['as' => 'store.cart', 'uses' => 'CartController@index']);
 Route::get('cart/add/{id}', ['as' => 'store.cart.add', 'uses' => 'CartController@add']);
 Route::get('cart/destroy/{id}', ['as' => 'store.cart.destroy', 'uses' => 'CartController@destroy']);
+Route::put('cart/update/{id}', ['as' => 'store.cart.update', 'uses' => 'CartController@update']);
 
-Route::get('checkout/placeorder', ['as' => 'store.checkout.place', 'uses' => 'CheckoutController@place']);
+
+Route::group(['middleware'=>'auth'], function(){
+    Route::get('checkout/placeorder', ['as' => 'store.checkout.place', 'uses' => 'CheckoutController@place']);
+    Route::get('account/orders', ['as' => 'account.orders', 'uses' => 'AccountController@orders']);
+});
 
 
 Route::group(['prefix' => 'admin', 'middleware'=>'auth', 'as' => 'admin.', 'where' => ['id' => '[0-9]+']] , function(){

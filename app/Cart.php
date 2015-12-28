@@ -12,13 +12,21 @@ class Cart
         $this->items = [];
     }
 
-    public function add($id, $name, $price)
+    public function add(Product $product)
     {
+        $id = $product->id;
+
+        if(count($product->images))
+           $img = 'uploads/'.$product->images->first()->id.'.'.$product->images->first()->extension;
+        else
+            $img = 'images/no-img.jpg';
+
         $this->items += [
             $id => [
                 'qtd' => isset($this->items[$id]['qtd']) ? $this->items[$id]['qtd']++ : 1,
-                'price' => $price,
-                'name' => $name
+                'price' => $product->price,
+                'name' => $product->name,
+                'image' => $img,
             ]
         ];
 
@@ -44,6 +52,13 @@ class Cart
         }
 
         return $total;
+    }
+
+    public function setQtd($id, $qtd)
+    {
+        if($qtd > 0){
+            $this->items[$id]['qtd'] = $qtd;
+        }
     }
 
     public function clear()

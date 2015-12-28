@@ -5,6 +5,7 @@ namespace CodeCommerce\Http\Controllers;
 use CodeCommerce\Cart;
 use CodeCommerce\Http\Requests;
 use CodeCommerce\Product;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
@@ -34,7 +35,7 @@ class CartController extends Controller
         $cart = $this->getCart();
 
         $product = Product::find($id);
-        $cart->add($id, $product->name, $product->price);
+        $cart->add($product);
 
         Session::set('cart', $cart);
 
@@ -63,5 +64,16 @@ class CartController extends Controller
         }
 
         return $cart;
+    }
+
+    public function update(Requests\CartRequest $request, $id)
+    {
+        $qtd = $request->get("qtd");
+        $cart = $this->getCart();
+        $cart->setQtd($id, $qtd);
+
+        Session::set('cart', $cart);
+
+        return redirect()->route('store.cart');
     }
 }

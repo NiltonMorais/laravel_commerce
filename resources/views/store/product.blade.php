@@ -11,11 +11,10 @@
         <div class="product-details"><!--product-details-->
             <div class="col-sm-5">
                 <div class="view-product">
-
                     @if(count($product->images))
                         <img src="{{ url('uploads/'.$product->images->first()->id.'.'.$product->images->first()->extension) }}" alt=""/>
                     @else
-                        <img src="{{ url('uploads/no-img.jpg') }}" alt="" width="200">
+                        <img src="{{ url('images/no-img.jpg') }}" alt="" width="200">
                     @endif
 
                 </div>
