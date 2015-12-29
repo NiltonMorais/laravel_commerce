@@ -8,11 +8,11 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "illuminate/html": "^5.0",
+        "bestmomo/scafold": "dev-master",
         "wesleywillians/laravel-pagseguro": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
-        "bestmomo/scafold": "dev-master",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
         "phpspec/phpspec": "~2.1"
