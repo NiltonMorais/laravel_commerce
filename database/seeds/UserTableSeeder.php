@@ -16,6 +16,7 @@ class UserTableSeeder extends Seeder
             'name' => "Nilton",
             'email' => "nilton@schoolofnet.com",
             'password' => \Illuminate\Support\Facades\Hash::make(123456),
+            'is_admin' => 1
         ]);
     }
 }

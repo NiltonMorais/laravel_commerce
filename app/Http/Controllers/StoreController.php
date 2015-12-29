@@ -3,12 +3,9 @@
 namespace CodeCommerce\Http\Controllers;
 
 use CodeCommerce\Category;
-use CodeCommerce\Tag;
-use CodeCommerce\Product;
-use Illuminate\Http\Request;
-
 use CodeCommerce\Http\Requests;
-use CodeCommerce\Http\Controllers\Controller;
+use CodeCommerce\Product;
+use CodeCommerce\Tag;
 
 class StoreController extends Controller
 {

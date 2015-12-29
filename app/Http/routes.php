@@ -19,7 +19,7 @@ Route::group(['middleware'=>'auth'], function(){
 });
 
 
-Route::group(['prefix' => 'admin', 'middleware'=>'auth', 'as' => 'admin.', 'where' => ['id' => '[0-9]+']] , function(){
+Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin', 'as' => 'admin.', 'where' => ['id' => '[0-9]+']] , function(){
 
     Route::group(['prefix'=> 'products', 'as' => 'products.'],function(){
         Route::get('', ['as' => 'index', 'uses' => 'AdminProductsController@index']);
