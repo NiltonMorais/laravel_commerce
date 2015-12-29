@@ -48,6 +48,16 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin', 'as' => 'admin.',
         Route::get('{id}/destroy', ['as' => 'destroy', 'uses' => 'AdminCategoriesController@destroy']);
     });
 
+    Route::group(['prefix'=> 'users', 'as' => 'users.'],function(){
+        Route::get('', ['as' => 'index', 'uses' => 'AdminUsersController@index']);
+        Route::get('{id}/show', ['as' => 'show', 'uses' => 'AdminUsersController@show']);
+        Route::get('create', ['as' => 'create', 'uses' => 'AdminUsersController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'AdminUsersController@store']);
+        Route::get('{id}/edit', ['as' => 'edit', 'uses' => 'AdminUsersController@edit']);
+        Route::put('{id}/update', ['as' => 'update', 'uses' => 'AdminUsersController@update']);
+        Route::get('{id}/destroy', ['as' => 'destroy', 'uses' => 'AdminUsersController@destroy']);
+    });
+
 });
 
 Route::controllers([
