@@ -83,6 +83,8 @@ class AdminProductsController extends Controller
     {
         $product = $this->productModel->find($id);
 
+        $product->tags = $product->tag_list;
+
         $categories = $category->lists('name','id');
 
         return view('products.edit', compact('product', 'categories'));
