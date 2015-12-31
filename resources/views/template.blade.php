@@ -22,6 +22,7 @@
                 <li><a href="{{ route('admin.users.index') }}">Users</a></li>
                 <li><a href="{{ route('admin.categories.index') }}">Categories</a></li>
                 <li><a href="{{ route('admin.products.index') }}">Products</a></li>
+                <li><a href="{{ route('admin.orders.index') }}">Orders</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -9,7 +9,7 @@ use CodeCommerce\Http\Controllers\Controller;
 use CodeCommerce\User;
 use Illuminate\Http\Request;
 
-class AdminUsersController extends Controller
+class RegisterController extends Controller
 {
     private $userModel;
 
@@ -20,8 +20,7 @@ class AdminUsersController extends Controller
 
     public function index()
     {
-        $users = $this->userModel->paginate(10);
-        return view('users.index', compact('users'));
+        return view('register.index');
     }
 
     /**
@@ -42,6 +41,9 @@ class AdminUsersController extends Controller
      */
     public function store(Request $request)
     {
+        $request->all();
+
+
         $input = $request->all();
         $input['is_admin'] = $request->get('is_admin') ? true : false;
         $input['password'] = bcrypt($input['password']);
@@ -50,6 +52,15 @@ class AdminUsersController extends Controller
         $user->save();
 
         return redirect()->route('admin.users.index');
+    }
+
+    public function address(Request $request)
+    {
+        $cep = $request->get('cep');
+
+        $endereco = json_decode(file_get_contents('http://api.postmon.com.br/v1/cep/'.$cep));
+
+        return view('register.index', compact('endereco'));
     }
 
     /**

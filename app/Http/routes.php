@@ -58,6 +58,16 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth_admin', 'as' => 'admin.',
         Route::get('{id}/destroy', ['as' => 'destroy', 'uses' => 'AdminUsersController@destroy']);
     });
 
+    Route::group(['prefix'=> 'orders', 'as' => 'orders.'],function(){
+        Route::get('', ['as' => 'index', 'uses' => 'AdminOrdersController@index']);
+        Route::get('{id}/show', ['as' => 'show', 'uses' => 'AdminOrdersController@show']);
+        Route::get('create', ['as' => 'create', 'uses' => 'AdminOrdersController@create']);
+        Route::post('store', ['as' => 'store', 'uses' => 'AdminOrdersController@store']);
+        Route::get('{id}/edit', ['as' => 'edit', 'uses' => 'AdminOrdersController@edit']);
+        Route::put('{id}/update', ['as' => 'update', 'uses' => 'AdminOrdersController@update']);
+        Route::get('{id}/destroy', ['as' => 'destroy', 'uses' => 'AdminOrdersController@destroy']);
+    });
+
 });
 
 Route::controllers([
@@ -65,3 +75,9 @@ Route::controllers([
     'password' => 'Auth\PasswordController',
     'test' => 'TestController',
 ]);
+
+Route::group(['prefix'=>'register', 'as'=>'register.'], function(){
+    Route::get('', ['as' => 'index', 'uses'=>'RegisterController@index']);
+    Route::post('store', ['as' => 'store', 'uses'=>'RegisterController@store']);
+    Route::post('address', ['as' => 'address', 'uses'=>'RegisterController@address']);
+});

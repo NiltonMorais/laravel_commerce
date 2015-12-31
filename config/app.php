@@ -137,7 +137,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Illuminate\Html\HtmlServiceProvider::class,
-        Bestmomo\Scafold\ScafoldServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -147,6 +146,8 @@ return [
         CodeCommerce\Providers\EventServiceProvider::class,
         CodeCommerce\Providers\RouteServiceProvider::class,
         LaravelPagseguro\LaravelPagseguroServiceProvider::class,
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
+        Cagartner\CorreiosConsulta\ServiceProvider::class,
 
     ],
 
@@ -197,6 +198,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Illuminate\Html\FormFacade::class,
         'Html'      => Illuminate\Html\HtmlFacade::class,
+        'Correios'    => Cagartner\CorreiosConsulta\Facade::class,
 
     ],
 

@@ -19,7 +19,7 @@
                 <td>{{$user->id}}</td>
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
-                <td>{{$user->is_admin}}</td>
+                <td>{{ $user->is_admin ? "Yes": "No"}}</td>
                 <td>
                     <a href="{{ route('admin.users.show', ['id'=>$user->id]) }}">Show</a> |
                     <a href="{{ route('admin.users.edit', ['id'=>$user->id]) }}">Edit</a> |
