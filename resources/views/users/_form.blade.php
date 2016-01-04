@@ -11,6 +11,10 @@
     {!! Form::text('password', null, ['class'=>'form-control']) !!}
 </div>
 <div class="form-group">
+    {!! Form::label('password_confirmation', 'Confirme sua senha:') !!}
+    {!! Form::text('password_confirmation', null, ['class'=>'form-control']) !!}
+</div>
+<div class="form-group">
     <div id="msgmCep"></div>
     {!! Form::label('cep', 'CEP:') !!}
     {!! Form::text('cep', null, ['class'=>'form-control']) !!}
@@ -39,8 +43,4 @@
 <div class="form-group">
     {!! Form::label('complement', 'Complemento:') !!}
     {!! Form::text('complement', null, ['class'=>'form-control']) !!}
-</div>
-<div class="form-group">
-    {!! Form::label('is_admin', 'Admin:') !!}
-    {!! Form::checkbox('is_admin') !!}
 </div>

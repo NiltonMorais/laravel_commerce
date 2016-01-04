@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'StoreController@index');
+Route::get('/', ['as' => 'store.index', 'uses' => 'StoreController@index']);
 Route::get('product/{id}', ['as' => 'store.product', 'uses' => 'StoreController@product']);
 Route::get('category/{id}', ['as' => 'store.category', 'uses' => 'StoreController@category']);
 Route::get('tag/{id}', ['as' => 'store.tag', 'uses' => 'StoreController@tag']);
