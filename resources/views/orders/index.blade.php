@@ -25,7 +25,7 @@
                     </ul>
                 </td>
                 <td>{{$order->total}}</td>
-                <td>{{$order->status}}</td>
+                <td>{{$order->status ? "Aprovado" : "Pendente"}}</td>
                 <td>
                     <a href="{{ route('admin.orders.show', ['id'=>$order->id]) }}">Show</a> |
                     <a href="{{ route('admin.orders.edit', ['id'=>$order->id]) }}">Edit</a>

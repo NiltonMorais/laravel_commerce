@@ -39,10 +39,9 @@ class RegisterController extends Controller
      * @param  Requests\CategoryRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Requests\RegisterRequest $request)
     {
         $request->all();
-
 
         $input = $request->all();
         $input['is_admin'] = $request->get('is_admin') ? true : false;
@@ -52,15 +51,6 @@ class RegisterController extends Controller
         $user->save();
 
         return redirect()->route('admin.users.index');
-    }
-
-    public function address(Request $request)
-    {
-        $cep = $request->get('cep');
-
-        $endereco = json_decode(file_get_contents('http://api.postmon.com.br/v1/cep/'.$cep));
-
-        return view('register.index', compact('endereco'));
     }
 
     /**

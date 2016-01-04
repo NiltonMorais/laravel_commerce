@@ -16,7 +16,12 @@ class UserTableSeeder extends Seeder
             'name' => "Nilton",
             'email' => "nilton@schoolofnet.com",
             'password' => \Illuminate\Support\Facades\Hash::make(123456),
-            'is_admin' => 1
+            'is_admin' => 1,
+            'cep' => "45690000",
+            'address' => "Rua teste",
+            'district' => "Centro",
+            'city' => "Ilhéus",
+            'state' => "Bahia",
         ]);
     }
 }

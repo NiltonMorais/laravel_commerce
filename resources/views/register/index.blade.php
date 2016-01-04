@@ -53,13 +53,12 @@
                                 <div id="msgmCep"></div>
                                 <label class="col-md-4 control-label">CEP</label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="cep" id="cep">
+                                    <input type="text" class="form-control" name="cep" id="cep" maxlength="8">
                                     <button type="button" id="botaoCPF" class="btn btn-default" onclick="getAddress()">
                                         Buscar
                                     </button>
                                 </div>
                             </div>
-
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Endereço</label>
@@ -68,6 +67,14 @@
                                            disabled="disabled">
                                 </div>
                             </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Número</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="number" id="number" maxlength="5">
+                                </div>
+                            </div>
+
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Bairro</label>
                                 <div class="col-md-6">
@@ -75,16 +82,25 @@
                                            disabled="disabled">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Cidade</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="city" id="city" disabled="disabled">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Estado</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="state" id="state" disabled="disabled">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Complemento</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="complement" id="complement">
                                 </div>
                             </div>
 
