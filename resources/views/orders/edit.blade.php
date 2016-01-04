@@ -10,11 +10,14 @@
         </ul>
     @endif
 
-    {!! Form::model($order, ['route'=>['admin.users.update', $order->id], 'method' => 'put']) !!}
-        @include('users._form')
+    {!! Form::model($order, ['route'=>['admin.orders.update', $order->id], 'method' => 'put']) !!}
+        <div class="form-group">
+            {!! Form::label('status', 'Status:') !!}
+            {!! Form::select('status', [0 => 'Pendente', 1 => 'Aprovado'],  null, ['class'=>'form-control']) !!}
+        </div>
         <div class="form-group">
             {!! Form::submit('Save Order', ['class'=>'btn btn-primary']) !!}
-            <a href="{{ route('admin.users.index') }}" class='btn btn-default '>Back</a>
+            <a href="{{ route('admin.orders.index') }}" class='btn btn-default '>Back</a>
         </div>
     {!! Form::close() !!}
 

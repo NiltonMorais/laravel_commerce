@@ -18,6 +18,7 @@ $factory->define(CodeCommerce\User::class, function (Faker\Generator $faker) {
         'password' => bcrypt(str_random(10)),
         'cep' => $faker->randomNumber(8),
         'address' => $faker->address(),
+        'number' => $faker->randomDigitNotNull(),
         'district' => $faker->streetName(),
         'city' => $faker->city(),
         'state' => $faker->state(),

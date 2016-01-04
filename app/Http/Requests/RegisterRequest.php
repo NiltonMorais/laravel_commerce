@@ -29,6 +29,7 @@ class RegisterRequest extends Request
             'password' => 'required|confirmed|min:6',
             'cep' => 'required|min:8',
             'address' => 'required',
+            'number' => 'required',
             'district' => 'required',
             'city' => 'required',
             'state' => 'required',

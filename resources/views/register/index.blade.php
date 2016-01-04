@@ -54,7 +54,7 @@
                                 <label class="col-md-4 control-label">CEP</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="cep" id="cep" maxlength="8">
-                                    <button type="button" id="botaoCPF" class="btn btn-default" onclick="getAddress()">
+                                    <button type="button"class="btn btn-default" onclick="getAddress()">
                                         Buscar
                                     </button>
                                 </div>
@@ -64,7 +64,7 @@
                                 <label class="col-md-4 control-label">Endereço</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="address" id="address"
-                                           disabled="disabled">
+                                           readonly="readonly">
                                 </div>
                             </div>
 
@@ -79,21 +79,21 @@
                                 <label class="col-md-4 control-label">Bairro</label>
                                 <div class="col-md-6">
                                     <input type="text" class="form-control" name="district" id="district"
-                                           disabled="disabled">
+                                           readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Cidade</label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="city" id="city" disabled="disabled">
+                                    <input type="text" class="form-control" name="city" id="city" readonly="readonly">
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Estado</label>
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" name="state" id="state" disabled="disabled">
+                                    <input type="text" class="form-control" name="state" id="state" readonly="readonly">
                                 </div>
                             </div>
 
@@ -118,30 +118,3 @@
         </div>
     </div>
 @endsection
-
-<script>
-    function getAddress() {
-        if ($("#cep").val()) {
-
-            $('#msgmCep').html("");
-
-            $.get('http://api.postmon.com.br/v1/cep/' + $("#cep").val(), function (data) {
-                $('#msgmCep').html("<p class='alert alert-success'>CEP encontrado</p>");
-                $('#address').val(data['logradouro'] ? data['logradouro'] : data['endereco']);
-                $('#district').val(data['bairro']);
-                $('#city').val(data['cidade']);
-                $('#state').val(data['estado']);
-            });
-        }
-        else {
-            $('#cep').focus();
-            $('#address').val("");
-            $('#district').val("");
-            $('#city').val("");
-            $('#state').val("");
-            $('#msgmCep').html("<p class='alert alert-danger'>Insira um CEP</p>");
-        }
-
-
-    }
-</script>

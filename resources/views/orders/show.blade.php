@@ -6,7 +6,7 @@
 
     <p><b>User:</b> {{$order->user->name}}</p>
     <p><b>Valor:</b> {{$order->total}}</p>
-    <p><b>Status:</b> {{$order->status}}</p>
+    <p><b>Status:</b> {{$order->status ? "Aprovado" : "Pendente"}}</p>
     <p><b>Itens:</b><p>
         <table class="table">
             <tr>

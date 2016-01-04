@@ -19,6 +19,7 @@ class UserTableSeeder extends Seeder
             'is_admin' => 1,
             'cep' => "45690000",
             'address' => "Rua teste",
+            'number' => "200",
             'district' => "Centro",
             'city' => "Ilhéus",
             'state' => "Bahia",

@@ -18,7 +18,7 @@ elixir(function(mix) {
         'prettyProto.css',
         'animate.css',
         'main.css',
-        'responsive.css'
+        'responsive.css',
     ], 'public/css/all.css');
 
     mix.scripts([
@@ -27,7 +27,8 @@ elixir(function(mix) {
         'jquery.scrollUp.min.js',
         'price-range.js',
         'jquery.prettyPhoto.js',
-        'main.js'
+        'main.js',
+        'busca-cep.js',
     ], 'public/js/all.js');
 
     mix.version(['css/all.css', 'js/all.js']);
