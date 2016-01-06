@@ -8,6 +8,7 @@ use CodeCommerce\Http\Requests;
 use CodeCommerce\Http\Controllers\Controller;
 use CodeCommerce\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RegisterController extends Controller
 {
@@ -23,15 +24,6 @@ class RegisterController extends Controller
         return view('register.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        return view('users.create');
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -41,68 +33,24 @@ class RegisterController extends Controller
      */
     public function store(Requests\RegisterRequest $request)
     {
-        $request->all();
-
         $input = $request->all();
+
+        $data = [
+            'email' => $input['email'],
+            'password' => $input['password'],
+        ];
+
         $input['is_admin'] = $request->get('is_admin') ? true : false;
         $input['password'] = bcrypt($input['password']);
 
         $user = $this->userModel->fill($input);
         $user->save();
 
-        return redirect()->route('admin.users.index');
+
+
+        Auth::attempt($data);
+
+        return redirect()->route('account.orders');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        $user = $this->userModel->find($id);
-
-        return view('users.show', compact('user'));
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        $user = $this->userModel->find($id);
-
-        return view('users.edit', compact('user'));
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        $input = $request->all();
-        $input['is_admin'] = $request->get('is_admin') ? true : false;
-        $this->userModel->find($id)->update($input);
-        return redirect()->route('admin.users.index');
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-       $this->userModel->find($id)->delete();
-        return redirect()->route('admin.users.index');
-    }
 }

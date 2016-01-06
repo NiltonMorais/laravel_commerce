@@ -27,7 +27,7 @@
                         </ul>
                     </td>
                     <td>{{$order->total}}</td>
-                    <td>{{$order->status}}</td>
+                    <td>{{$order->status ? "Aprovado" : "Pendente"}}</td>
                 </tr>
             @endforeach
             </tbody>
