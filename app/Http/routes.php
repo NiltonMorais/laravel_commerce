@@ -9,6 +9,8 @@ Route::get('cart/add/{id}', ['as' => 'store.cart.add', 'uses' => 'CartController
 Route::get('cart/destroy/{id}', ['as' => 'store.cart.destroy', 'uses' => 'CartController@destroy']);
 Route::put('cart/update/{id}', ['as' => 'store.cart.update', 'uses' => 'CartController@update']);
 
+Route::get('checkout/end', ['as' => 'store.checkout.end', 'uses' => 'CheckoutController@end']);
+Route::get('pagseguro/notification}', ['as' => 'store.pagseguro.notification', 'uses' => 'CheckoutController@end']);
 
 Route::group(['middleware'=>'auth'], function(){
     Route::get('checkout/placeorder', ['as' => 'store.checkout.place', 'uses' => 'CheckoutController@place']);

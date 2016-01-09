@@ -10,15 +10,16 @@
         <table class="table">
             <tbody>
             <tr>
-                <th>#ID</th>
+                <th>Código da Transação</th>
                 <th>Itens</th>
                 <th>Valor</th>
                 <th>Status</th>
+                <th>Meio de pagamento</th>
             </tr>
 
             @foreach($orders as $order)
                 <tr>
-                    <td>{{$order->id}}</td>
+                    <td>{{$order->transaction_code}}</td>
                     <td>
                         <ul>
                         @foreach($order->items as $item)
@@ -26,8 +27,9 @@
                         @endforeach
                         </ul>
                     </td>
-                    <td>{{$order->total}}</td>
-                    <td>{{$order->status ? "Aprovado" : "Pendente"}}</td>
+                    <td>R$ {{ number_format($order->total, 2, ',', '.') }}</td>
+                    <td>{{$order->status->name}}</td>
+                    <td>{{$order->paymentType->name}}</td>
                 </tr>
             @endforeach
             </tbody>

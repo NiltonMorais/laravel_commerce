@@ -28,7 +28,7 @@
                                 <p>Código: {{ $k }}</p>
                             </td>
                             <td class="cart_price">
-                                R$ {{$item['price']}}
+                                R$ {{ number_format($item['price'], 2, ',', '.') }}
                             </td>
                             <td class="cart_quantity">
                                 {!! Form::open(['route'=>['store.cart.update', $k], 'method'=>'put']) !!}
