@@ -136,14 +136,14 @@ class AdminProductsController extends Controller
         return view('products.create_image', compact('product'));
     }
 
-    public function storeImage(Requests\ProductImageRequest $request, $id, ProductImage $productImage)
+    public function storeImage(Requests\ProductImageRequest $request, $id, ProductImage $productImage, \Illuminate\Contracts\Filesystem\Factory $storage, \Illuminate\Filesystem\Filesystem $fileSystem)
     {
         $file = $request->file('image');
         $extension = $file->getClientOriginalExtension();
 
         $image = $productImage::create(['product_id'=>$id, 'extension'=>$extension]);
 
-        Storage::disk('public_local')->put($image->id.'.'.$extension, File::get($file));
+        $storage->disk('public_local')->put($image->id.'.'.$extension, $fileSystem->get($file));
         return redirect()->route('admin.products.images.index', ['id'=>$id]);
     }
 
